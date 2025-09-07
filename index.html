@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blith Imperial Trading Co. Ltd. | Forex Trading Experts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0A1931;
+            --gold: #D4AF37;
+            --light-gold: #F1E5AC;
+            --white: #FFFFFF;
+            --light-blue: #F5F7FA;
+            --gray: #666666;
+            --dark-gray: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--navy);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            color: var(--white);
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .logo-text span {
+            color: var(--gold);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            color: var(--white);
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Page Container */
+        .page {
+            display: none;
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 25, 49, 0.7);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid var(--gold);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: var(--gold);
+            margin: 15px auto 0;
+        }
+        
+        /* Calculator Section */
+        .calculator {
+            background-color: var(--light-blue);
+            padding: 80px 0;
+        }
+        
+        .calculator-container {
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .calculator-header {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 20px 30px;
+            text-align: center;
+        }
+        
+        .calculator-header h2 {
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+        
+        .calculator-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .calculator-form {
+            flex: 1;
+            padding: 30px;
+            min-width: 300px;
+            background-color: var(--light-blue);
+        }
+        
+        .calculator-results {
+            flex: 1;
+            padding: 30px;
+            min-width: 300px;
+            background-color: var(--white);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .calculate-btn {
+            background-color: var(--gold);
+            color: var(--navy);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            font-size: 16px;
+        }
+        
+        .calculate-btn:hover {
+            background-color: var(--light-gold);
+        }
+        
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .result-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .result-label {
+            font-weight: 500;
+            color: var(--dark-gray);
+        }
+        
+        .result-value {
+            font-weight: 600;
+            color: var(--navy);
+        }
+        
+        .result-highlight {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+        
+        .monthly-breakdown {
+            margin-top: 30px;
+        }
+        
+        .monthly-breakdown h3 {
+            margin-bottom: 15px;
+            color: var(--navy);
+        }
+        
+        .breakdown-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .breakdown-table th,
+        .breakdown-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+        
+        .breakdown-table th {
+            background-color: var(--light-blue);
+            color: var(--navy);
+        }
+        
+        .breakdown-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .deposits-control {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f5f7fa;
+            border-radius: 8px;
+        }
+        
+        .deposits-control h4 {
+            margin-bottom: 15px;
+            color: var(--navy);
+        }
+        
+        .add-deposit-btn {
+            background-color: var(--navy);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .deposit-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        
+        .deposit-item input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        
+        .remove-deposit {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            borderRadius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--white);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* CEO Message Section */
+        .ceo-section {
+            background: linear-gradient(135deg, #0A1931 0%, #1a3a6d 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .ceo-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .ceo-image {
+            flex: 1;
+            min-width: 300px;
+            background-color: #0c1f3c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+        
+        .ceo-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 5px solid var(--gold);
+        }
+        
+        .ceo-message {
+            flex: 2;
+            min-width: 300px;
+            padding: 40px;
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .ceo-message h3 {
+            font-size: 1.8rem;
+            color: var(--navy);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--gold);
+        }
+        
+        .message-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .message-text p {
+            margin-bottom: 20px;
+        }
+        
+        .ceo-signature {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            align-items: flex-start;
+        }
+        
+        .signature-image {
+            height: 60px;
+            width: 200px;
+            background-color: #f5f5f5;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            color: var(--gray);
+        }
+        
+        .ceo-name {
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 1.2rem;
+        }
+        
+        .ceo-title {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--light-blue);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        /* Values Section */
+        .values {
+            background-color: var(--white);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        /* How It Works Section */
+        .how-it-works {
+            background-color: var(--light-blue);
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            text-align: center;
+            flex: 1;
+            position: relative;
+            padding: 0 20px;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--gold);
+            color: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            background-color: var(--navy);
+            color: var(--white);
+        }
+        
+        .benefits .section-title h2 {
+            color: var(--white);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        /* Video Section */
+        .video-section {
+            background-color: var(--white);
+            text-align: center;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* CTA Section */
+        .cta {
+            text-align: center;
+            background: linear-gradient(rgba(10, 25, 49, 0.9), rgba(10, 25, 49, 0.9)), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: var(--white);
+            padding: 100px 0;
+            background-attachment: fixed;
+        }
+        
+        .cta h2 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo span {
+            color: var(--gold);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .steps {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .calculator-content {
+                flex-direction: column;
+            }
+            
+            .ceo-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 20px;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--navy);
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            
+            .breakdown-table {
+                font-size: 0.8rem;
+            }
+            
+            .ceo-image {
+                order: -1;
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-text">Blith <span>Imperial</span></div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#" data-page="home">Home</a></li>
+                    <li><a href="#" data-page="about">About Us</a></li>
+                    <li><a href="#" data-page="services">Services</a></li>
+                    <li><a href="#" data-page="how-it-works">How It Works</a></li>
+                    <li><a href="#" data-page="benefits">Benefits</a></li>
+                    <li><a href="#" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <video autoplay muted loop class="hero-video">
+                <source src="https://res.cloudinary.com/dnxtuowlp/video/upload/v1757238455/vecteezy_business-candle-stick-graph-chart-of-stock-market-investment_15279082_ck3e9t.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1>Democratizing Access to Forex Markets</h1>
+                <p>Blith Imperial Trading Co. Ltd. provides innovative trading solutions where investors thrive alongside seasoned professionals.</p>
+                <a href="#" data-page="services" class="btn">Start Investing</a>
+                <a href="#" data-page="about" class="btn btn-outline">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="calculator">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Profit Calculator</h2>
+                    <p>See how much you can earn with our forex trading services</p>
+                </div>
+                <div class="calculator-container">
+                    <div class="calculator-header">
+                        <h2>Forex Investment Calculator</h2>
+                        <p>25% monthly returns | 25% performance fee on profits</p>
+                    </div>
+                    <div class="calculator-content">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="initialDeposit">Initial Deposit ($)</label>
+                                <input type="number" id="initialDeposit" placeholder="Enter amount" value="50000" min="0">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="months">Number of Months</label>
+                                <input type="number" id="months" placeholder="Enter months" value="3" min="1" max="36">
+                            </div>
+                            
+                            <div class="deposits-control">
+                                <h4>Additional Deposits</h4>
+                                <p>Specify additional deposits for specific months</p>
+                                
+                                <div id="depositsContainer">
+                                    <!-- Deposits will be added here dynamically -->
+                                </div>
+                                
+                                <button type="button" class="add-deposit-btn" id="addDepositBtn">
+                                    <i class="fas fa-plus"></i> Add Deposit
+                                </button>
+                            </div>
+                            
+                            <button class="calculate-btn" id="calculateBtn">Calculate Projection</button>
+                        </div>
+                        
+                        <div class="calculator-results">
+                            <h3>Projected Results</h3>
+                            <div class="result-item">
+                                <span class="result-label">Initial Investment:</span>
+                                <span class="result-value" id="initialInvestment">$50,000.00</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Total Additional Deposits:</span>
+                                <span class="result-value" id="totalAdditional">$100,000.00</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Total Profits:</span>
+                                <span class="result-value" id="totalProfits">$39,843.75</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Performance Fees (25%):</span>
+                                <span class="result-value" id="performanceFees">$9,960.94</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Net Profits:</span>
+                                <span class="result-value result-highlight" id="netProfits">$29,882.81</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Final Balance:</span>
+                                <span class="result-value result-highlight" id="finalBalance">$179,882.81</span>
+                            </div>
+                            
+                            <div class="note">
+                                <p><strong>Note:</strong> Calculations assume 25% monthly returns on the investment balance. Blith Imperial charges a 25% performance fee on profits.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="monthly-breakdown">
+                        <div class="container">
+                            <h3>Monthly Breakdown</h3>
+                            <table class="breakdown-table">
+                                <thead>
+                                    <tr>
+                                        <th>Month</th>
+                                        <th>Starting Balance</th>
+                                        <th>Additional Deposit</th>
+                                        <th>Investment Balance</th>
+                                        <th>Monthly Profit (25%)</th>
+                                        <th>Performance Fee (25%)</th>
+                                        <th>Net Profit</th>
+                                        <th>Ending Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownBody">
+                                    <!-- JavaScript will populate this -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose Blith Imperial?</h2>
+                    <p>Watch our CEO explain what makes us different</p>
+                </div>
+                <div class="video-container">
+                    <video controls>
+                        <source src="https://res.cloudinary.com/dnxtuowlp/video/upload/v1757238439/Ian_Blith_v01pzg.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>Start Your Investment Journey Today</h2>
+                <p>Join Blith Imperial Trading Co. Ltd. and experience the synergy of expertise and innovation where success knows no bounds.</p>
+                <a href="#" data-page="contact" class="btn">Get Started</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <div class="container">
+            <!-- CEO Message Section -->
+            <section class="ceo-section">
+                <div class="ceo-content">
+                    <div class="ceo-image">
+                        <!-- Using a placeholder image since no CEO image was provided -->
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CEO of Blith Imperial Trading Co. Ltd">
+                    </div>
+                    
+                    <div class="ceo-message">
+                        <h3>Greetings from Our CEO</h3>
+                        
+                        <div class="message-text">
+                            <p>Dear Valued Investors & Traders,</p>
+                            <p>Welcome to Blith Imperial Trading Co. Ltd, an exceptional trading entity proudly operating under the esteemed umbrella of Blith Imperial Holdings.</p>
+                            <p>As the CEO, I am honored to extend my warmest greetings to both novice and experienced investors alike.</p>
+                            <p>At Blith Imperial Trading Co. Ltd, we have cultivated a wealth of experience and expertise in the dynamic world of financial markets. Our unwavering commitment revolves around empowering you, our valued investors & traders, through cutting-edge solutions in forex copy trading and proprietary trading.</p>
+                        </div>
+                        
+                        <div class="ceo-signature">
+                            <div class="signature-image">Signature</div>
+                            <div class="ceo-name">Ian Blith</div>
+                            <div class="ceo-title">Chief Executive Officer</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about">
+                <div class="section-title">
+                    <h2>About Us</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Blith Imperial Trading Co. Ltd stands as a beacon of excellence in the financial industry. As a part of the Blith Imperial Holdings group, we leverage a legacy of trust, integrity, and success.</p>
+                        <p>Our mission is to democratize access to the forex market, offering a platform where investors can thrive alongside seasoned professionals. We believe in providing a secure and empowering environment for investors to navigate the complexities of the forex market consistently.</p>
+                        <p>Through cutting-edge technology, ethical practices, and a relentless pursuit of excellence, we aim to be the catalyst for our clients' financial success.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Trading Office">
+                    </div>
+                </div>
+            </section>
+
+            <section class="values">
+                <div class="section-title">
+                    <h2>Our Values</h2>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Trust</h3>
+                        <p>We build long-term relationships based on transparency, reliability, and integrity in all our operations.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>We continuously evolve our strategies and technology to stay ahead in the dynamic forex market.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Client Success</h3>
+                        <p>Your financial success is our ultimate goal. We're committed to helping you achieve your investment objectives.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Section -->
+            <section class="video-section">
+                <div class="section-title">
+                    <h2>Our Trading Philosophy</h2>
+                </div>
+                <div class="video-container">
+                    <video controls>
+                        <source src="https://res.cloudinary.com/dnxtuowlp/video/upload/v1757238449/vecteezy_forex-trading-investor-financial-analyst-stock-market-chart_26389051_lz7zcn.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Services Page -->
+    <div id="services" class="page">
+        <div class="container">
+            <section class="services">
+                <div class="section-title">
+                    <h2>Our Services</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-copy"></i>
+                        </div>
+                        <h3>Forex Copy Trading</h3>
+                        <p>Harness the expertise of accomplished forex traders by allowing our investors to copy their trades. Our user-friendly platform offers transparent performance tracking through well-regulated FX brokers.</p>
+                        <ul>
+                            <li>Customizable risk preferences</li>
+                            <li>Transparent performance tracking</li>
+                            <li>User-friendly platform</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Proprietary Trading</h3>
+                        <p>Our in-house team of skilled traders executes diversified strategies using a blend of manual and algorithmic trading techniques for optimal results.</p>
+                        <ul>
+                            <li>Diversified trading strategies</li>
+                            <li>Blend of manual and algorithmic trading</li>
+                            <li>Emphasis on risk management</li>
+                            <li>Traders recruitment for new accounts</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Section -->
+            <section class="video-section">
+                <div class="section-title">
+                    <h2>How Copy Trading Works</h2>
+                </div>
+                <div class="video-container">
+                    <video controls>
+                        <source src="https://res.cloudinary.com/dnxtuowlp/video/upload/v1757238455/vecteezy_business-candle-stick-graph-chart-of-stock-market-investment_15279082_ck3e9t.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- How It Works Page -->
+    <div id="how-it-works" class="page">
+        <div class="container">
+            <section class="how-it-works">
+                <div class="section-title">
+                    <h2>How It Works</h2>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Open Account</h3>
+                        <p>Open and verify your account using our links to the regulated brokers we use.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Verify Account</h3>
+                        <p>Complete the verification process by submitting the required documents.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Copy Trades</h3>
+                        <p>Follow and copy our strategy account as designated. Sit back and watch your investments grow.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Benefits Page -->
+    <div id="benefits" class="page">
+        <div class="container">
+            <section class="benefits">
+                <div class="section-title">
+                    <h2>Why Trade With Us</h2>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>Potential Returns</h3>
+                        <p>Potential returns of 25% minimum per month through our expert trading strategies.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Regulated Brokers</h3>
+                        <p>We work exclusively with regulated brokers to ensure the security of your investments.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Capital Protection</h3>
+                        <p>We trade our capital and only earn when you profit, aligning our interests with yours.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>Seamless Payouts</h3>
+                        <p>Automatic profit split with a performance fee of just 25% on generated returns.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Section -->
+            <section class="video-section">
+                <div class="section-title">
+                    <h2>Client Success Stories</h2>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/6GWLt8sLIVM" title="Client Testimonials" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <div class="container">
+            <section class="contact">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>Have questions about our services or ready to start investing? Reach out to our team for more information.</p>
+                        <div class="contact-details">
+                            <p><i class="fas fa-envelope"></i> blithimperialltd@gmail.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Strategically located in a key financial center</p>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Blith <span>Imperial</span></div>
+                    <p>Blith Imperial Trading Co. Ltd provides innovative trading solutions where investors thrive alongside seasoned professionals.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" data-page="home">Home</a></li>
+                        <li><a href="#" data-page="about">About Us</a></li>
+                        <li><a href="#" data-page="services">Services</a></li>
+                        <li><a href="#" data-page="how-it-works">How It Works</a></li>
+                        <li><a href="#" data-page="benefits">Benefits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> blithimperialltd@gmail.com</p>
+                    <p><i class="fas fa-globe"></i> www.blithimperial.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blith Imperial Trading Co. Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page Navigation
+        const pages = document.querySelectorAll('.page');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        function showPage(pageId) {
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update URL hash
+            window.location.hash = pageId;
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Set up navigation
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageId = link.getAttribute('data-page');
+                showPage(pageId);
+                
+                // Close mobile menu if open
+                if (navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                }
+            });
+        });
+        
+        // Check URL hash on load
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                showPage(hash);
+            }
+            
+            // Calculate initial projection
+            calculateProjection();
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+        
+        // Profit Calculator
+        const calculateBtn = document.getElementById('calculateBtn');
+        const addDepositBtn = document.getElementById('addDepositBtn');
+        const depositsContainer = document.getElementById('depositsContainer');
+        
+        calculateBtn.addEventListener('click', calculateProjection);
+        addDepositBtn.addEventListener('click', addDepositField);
+        
+        // Add initial deposit field
+        addDepositField();
+        
+        function addDepositField() {
+            const depositItem = document.createElement('div');
+            depositItem.className = 'deposit-item';
+            depositItem.innerHTML = `
+                <input type="number" placeholder="Month number" class="deposit-month" min="2" value="2">
+                <input type="number" placeholder="Amount ($)" class="deposit-amount" value="100000">
+                <button type="button" class="remove-deposit"><i class="fas fa-times"></i></button>
+            `;
+            
+            depositsContainer.appendChild(depositItem);
+            
+            // Add event listener to remove button
+            const removeBtn = depositItem.querySelector('.remove-deposit');
+            removeBtn.addEventListener('click', function() {
+                depositsContainer.removeChild(depositItem);
+            });
+        }
+        
+        function calculateProjection() {
+            const initialDeposit = parseFloat(document.getElementById('initialDeposit').value) || 0;
+            const months = parseInt(document.getElementById('months').value) || 1;
+            
+            // Get additional deposits
+            const depositItems = depositsContainer.querySelectorAll('.deposit-item');
+            const deposits = [];
+            
+            depositItems.forEach(item => {
+                const month = parseInt(item.querySelector('.deposit-month').value) || 0;
+                const amount = parseFloat(item.querySelector('.deposit-amount').value) || 0;
+                
+                if (month > 0 && month <= months && amount > 0) {
+                    deposits.push({ month, amount });
+                }
+            });
+            
+            let balance = initialDeposit;
+            let totalProfit = 0;
+            let totalFees = 0;
+            let totalAdditional = 0;
+            let breakdownHTML = '';
+            
+            // Update initial values
+            document.getElementById('initialInvestment').textContent = formatCurrency(initialDeposit);
+            
+            for (let month = 1; month <= months; month++) {
+                const startingBalance = balance;
+                let additional = 0;
+                
+                // Check if there's a deposit this month
+                const monthDeposits = deposits.filter(d => d.month === month);
+                if (monthDeposits.length > 0) {
+                    additional = monthDeposits.reduce((sum, d) => sum + d.amount, 0);
+                    balance += additional;
+                    totalAdditional += additional;
+                }
+                
+                const investmentBalance = balance;
+                const monthlyProfit = investmentBalance * 0.25;
+                const performanceFee = monthlyProfit * 0.25;
+                const netProfit = monthlyProfit - performanceFee;
+                
+                balance += netProfit;
+                totalProfit += monthlyProfit;
+                totalFees += performanceFee;
+                
+                // Add to breakdown table
+                breakdownHTML += `
+                    <tr>
+                        <td>${month}</td>
+                        <td>${formatCurrency(startingBalance)}</td>
+                        <td>${formatCurrency(additional)}</td>
+                        <td>${formatCurrency(investmentBalance)}</td>
+                        <td>${formatCurrency(monthlyProfit)}</td>
+                        <td>${formatCurrency(performanceFee)}</td>
+                        <td>${formatCurrency(netProfit)}</td>
+                        <td>${formatCurrency(balance)}</td>
+                    </tr>
+                `;
+            }
+            
+            // Update results
+            document.getElementById('totalAdditional').textContent = formatCurrency(totalAdditional);
+            document.getElementById('totalProfits').textContent = formatCurrency(totalProfit);
+            document.getElementById('performanceFees').textContent = formatCurrency(totalFees);
+            document.getElementById('netProfits').textContent = formatCurrency(totalProfit - totalFees);
+            document.getElementById('finalBalance').textContent = formatCurrency(balance);
+            
+            // Update breakdown table
+            document.getElementById('breakdownBody').innerHTML = breakdownHTML;
+        }
+        
+        function formatCurrency(amount) {
+            return '$' + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+        }
+    </script>
+</body>
+</html>
