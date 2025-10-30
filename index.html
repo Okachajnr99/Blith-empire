@@ -86,7 +86,7 @@
         }
         
         .logo img {
-            height: 50px;
+            height: 90px; /* Increased logo size */
             margin-right: 10px;
         }
         
@@ -97,12 +97,13 @@
         
         .company-name {
             font-weight: 700;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             line-height: 1.2;
+            color: var(--primary);
         }
         
         .company-tagline {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 400;
             color: var(--accent);
         }
@@ -198,15 +199,12 @@
         }
         
         .image-background img {
-            min-width: 80%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
         
         .image-overlay {
@@ -1033,7 +1031,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(calc(-350px * 6 - 1.5rem * 6));
+                transform: translateX(calc(-350px * 8 - 1.5rem * 8));
             }
         }
         
@@ -1065,6 +1063,78 @@
         .stat-label {
             font-size: 1rem;
             opacity: 0.9;
+        }
+        
+        /* PROJECTS LIST SECTION */
+        .projects-list-section {
+            padding: 6rem 2rem;
+            background: var(--light);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            padding: 2rem;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-details h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .project-category {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .project-description {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-date {
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+        
+        .project-status-badge {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
         }
         
         /* Map Section */
@@ -1484,7 +1554,7 @@
                     transform: translateX(0);
                 }
                 100% {
-                    transform: translateX(calc(-280px * 6 - 1.5rem * 6));
+                    transform: translateX(calc(-280px * 8 - 1.5rem * 8));
                 }
             }
             
@@ -1504,6 +1574,10 @@
             
             .map-container {
                 height: 400px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1545,7 +1619,7 @@
                     transform: translateX(0);
                 }
                 100% {
-                    transform: translateX(calc(-220px * 6 - 1.5rem * 6));
+                    transform: translateX(calc(-220px * 8 - 1.5rem * 8));
                 }
             }
             
@@ -1579,7 +1653,7 @@
 <header class="header">
     <nav class="nav-container">
         <div class="logo">
-            <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761805995/Terracore_logo-removebg-preview_qfkyvj.png" alt="Terracore Spatial Consultants Logo" loading="lazy">
+            <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761834248/terracore_logo2_an4j4m.png" alt="Terracore Spatial Consultants Logo" loading="lazy">
             <div class="logo-text">
                 <span class="company-name">TERRACORE SPATIAL</span>
                 <span class="company-tagline">CONSULTANTS LTD</span>
@@ -1593,6 +1667,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#projects-list">Project List</a></li>
             <li><a href="#map">Location</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1870,10 +1945,10 @@
         </div>
         
         <div class="team-grid">
-            <!-- Team Member 1 -->
+            <!-- Team Member 1 - Clifford Juma -->
             <div class="team-member animate-on-scroll">
                 <div class="member-photo">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Clifford Juma - Managing Director" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761828140/Juma_d7yakr.jpg" alt="Clifford Juma - Managing Director" loading="lazy">
                     <div class="member-overlay">
                         <div class="social-links">
                             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -1894,10 +1969,10 @@
                 </div>
             </div>
             
-            <!-- Team Member 2 -->
+            <!-- Team Member 2 - John Sagwe -->
             <div class="team-member animate-on-scroll">
                 <div class="member-photo">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="John Sagwe - Quantity Surveyor" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761828072/john_tqwlwq.png" alt="John Sagwe - Quantity Surveyor" loading="lazy">
                     <div class="member-overlay">
                         <div class="social-links">
                             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -1918,7 +1993,7 @@
                 </div>
             </div>
             
-            <!-- Team Member 3 -->
+            <!-- Team Member 3 - John Chogo -->
             <div class="team-member animate-on-scroll">
                 <div class="member-photo">
                     <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="John Chogo - Survey & Drone Expert" loading="lazy">
@@ -1942,10 +2017,10 @@
                 </div>
             </div>
             
-            <!-- Team Member 4 -->
+            <!-- Team Member 4 - John (Assistant Surveyor) -->
             <div class="team-member animate-on-scroll">
                 <div class="member-photo">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="John - Assistant Surveyor" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761828072/john_tqwlwq.png" alt="John - Assistant Surveyor" loading="lazy">
                     <div class="member-overlay">
                         <div class="social-links">
                             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -1966,10 +2041,10 @@
                 </div>
             </div>
             
-            <!-- Team Member 5 -->
+            <!-- Team Member 5 - Brian Akata -->
             <div class="team-member animate-on-scroll">
                 <div class="member-photo">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Brian Akata - Civil Engineer" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761832305/Brayo-removebg-preview_axotx3.png" alt="Brian Akata - Civil Engineer" loading="lazy">
                     <div class="member-overlay">
                         <div class="social-links">
                             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -2024,7 +2099,7 @@
             <div class="film-reel-track">
                 <!-- Project 1 -->
                 <div class="film-reel-item">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757447625/IMG_20220929_093447_349_asnvnm.jpg" alt="KAWASCO Water Project" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761826721/bc2_ca0alq.jpg" alt="KAWASCO Water Project" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">KAWASCO Water Project</h3>
                         <p class="project-category">Water & Sewer Infrastructure</p>
@@ -2034,7 +2109,7 @@
 
                 <!-- Project 2 -->
                 <div class="film-reel-item">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757454387/IMG_20221027_113243_995_nd6dwv.jpg" alt="NAWASCO Water Project" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757453505/IMG_20221019_124449_589_kyvuvv.jpg" alt="NAWASCO Water Project" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">NAWASCO Water Project</h3>
                         <p class="project-category">Water Infrastructure Survey</p>
@@ -2044,7 +2119,7 @@
 
                 <!-- Project 3 -->
                 <div class="film-reel-item">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Rift Valley Water Works" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761826709/IMG_20200914_181853_7_jwvk7y.jpg" alt="Rift Valley Water Works" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">Rift Valley Water Works</h3>
                         <p class="project-category">Multi-year Water Project</p>
@@ -2054,7 +2129,7 @@
 
                 <!-- Project 4 -->
                 <div class="film-reel-item">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Green Park Development" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761838159/bc4_oyjr1c.jpg" alt="Green Park Development" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">Green Park Development</h3>
                         <p class="project-category">Sectional Property Surveys</p>
@@ -2064,7 +2139,7 @@
 
                 <!-- Project 5 -->
                 <div class="film-reel-item">
-                    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="General Mathenge Apartments" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761838161/IMG_20221124_151433_854_ozv18l.jpg" alt="General Mathenge Apartments" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">General Mathenge Apartments</h3>
                         <p class="project-category">Sectional Property Survey</p>
@@ -2074,7 +2149,7 @@
 
                 <!-- Project 6 -->
                 <div class="film-reel-item">
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Purple Haze Apartments" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761838156/IMG_20250923_092746_HDR_maoqmk.jpg" alt="Purple Haze Apartments" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">Purple Haze Apartments</h3>
                         <p class="project-category">Residential Development</p>
@@ -2082,10 +2157,30 @@
                     </div>
                 </div>
 
+                <!-- Project 7 -->
+                <div class="film-reel-item">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761838146/IMG_20230920_153104_694_v7pugg.jpg" alt="Mombasa Road Commercial Complex" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Mombasa Road Commercial Complex</h3>
+                        <p class="project-category">Commercial Development</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="film-reel-item">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761838634/Geop3_ow2s7o.png" alt="Thika Highway Infrastructure" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Thika Highway Infrastructure</h3>
+                        <p class="project-category">Infrastructure Survey</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
                 <!-- Duplicate items for seamless loop -->
                 <!-- Project 1 Duplicate -->
                 <div class="film-reel-item">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757447625/IMG_20220929_093447_349_asnvnm.jpg" alt="KAWASCO Water Project" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761826721/bc2_ca0alq.jpg" alt="KAWASCO Water Project" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">KAWASCO Water Project</h3>
                         <p class="project-category">Water & Sewer Infrastructure</p>
@@ -2095,7 +2190,7 @@
 
                 <!-- Project 2 Duplicate -->
                 <div class="film-reel-item">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757454387/IMG_20221027_113243_995_nd6dwv.jpg" alt="NAWASCO Water Project" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757453505/IMG_20221019_124449_589_kyvuvv.jpg" alt="NAWASCO Water Project" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">NAWASCO Water Project</h3>
                         <p class="project-category">Water Infrastructure Survey</p>
@@ -2105,7 +2200,7 @@
 
                 <!-- Project 3 Duplicate -->
                 <div class="film-reel-item">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Rift Valley Water Works" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761826709/IMG_20200914_181853_7_jwvk7y.jpg" alt="Rift Valley Water Works" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">Rift Valley Water Works</h3>
                         <p class="project-category">Multi-year Water Project</p>
@@ -2115,7 +2210,7 @@
 
                 <!-- Project 4 Duplicate -->
                 <div class="film-reel-item">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Green Park Development" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761838159/bc4_oyjr1c.jpg" alt="Green Park Development" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">Green Park Development</h3>
                         <p class="project-category">Sectional Property Surveys</p>
@@ -2125,7 +2220,7 @@
 
                 <!-- Project 5 Duplicate -->
                 <div class="film-reel-item">
-                    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="General Mathenge Apartments" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761838161/IMG_20221124_151433_854_ozv18l.jpg" alt="General Mathenge Apartments" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">General Mathenge Apartments</h3>
                         <p class="project-category">Sectional Property Survey</p>
@@ -2135,10 +2230,30 @@
 
                 <!-- Project 6 Duplicate -->
                 <div class="film-reel-item">
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Purple Haze Apartments" class="film-reel-image" loading="lazy">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761838156/IMG_20250923_092746_HDR_maoqmk.jpg" alt="Purple Haze Apartments" class="film-reel-image" loading="lazy">
                     <div class="project-overlay">
                         <h3 class="project-title">Purple Haze Apartments</h3>
                         <p class="project-category">Residential Development</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 7 Duplicate -->
+                <div class="film-reel-item">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761838146/IMG_20230920_153104_694_v7pugg.jpg" alt="Mombasa Road Commercial Complex" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Mombasa Road Commercial Complex</h3>
+                        <p class="project-category">Commercial Development</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 8 Duplicate -->
+                <div class="film-reel-item">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761838634/Geop3_ow2s7o.png" alt="Thika Highway Infrastructure" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Thika Highway Infrastructure</h3>
+                        <p class="project-category">Infrastructure Survey</p>
                         <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
                     </div>
                 </div>
@@ -2162,6 +2277,122 @@
             <div class="stat-item">
                 <div class="stat-number">5+</div>
                 <div class="stat-label">Years Experience</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects List Section -->
+<section id="projects-list" class="projects-list-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title animate-on-scroll">Our Project Portfolio</h2>
+            <p class="section-subtitle animate-on-scroll">Detailed overview of our completed land surveying and spatial solutions projects</p>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card animate-on-scroll">
+                <div class="project-details">
+                    <h3>KAWASCO Water Project</h3>
+                    <p class="project-category"><i class="fas fa-tint"></i> Water & Sewer Infrastructure</p>
+                    <p class="project-description">Comprehensive surveying services for the KAWASCO water and sewer infrastructure project, including topographic mapping, boundary surveys, and construction layout.</p>
+                    <div class="project-meta">
+                        <span class="project-date">Completed: 2023</span>
+                        <span class="project-status-badge">Completed</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card animate-on-scroll">
+                <div class="project-details">
+                    <h3>NAWASCO Water Project</h3>
+                    <p class="project-category"><i class="fas fa-tint"></i> Water Infrastructure Survey</p>
+                    <p class="project-description">Detailed topographic and engineering surveys for the NAWASCO water infrastructure project, ensuring accurate pipeline alignment and facility placement.</p>
+                    <div class="project-meta">
+                        <span class="project-date">Completed: 2023</span>
+                        <span class="project-status-badge">Completed</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card animate-on-scroll">
+                <div class="project-details">
+                    <h3>Rift Valley Water Works</h3>
+                    <p class="project-category"><i class="fas fa-tint"></i> Multi-year Water Project</p>
+                    <p class="project-description">Multi-year surveying project for the Rift Valley Water Works, providing ongoing topographic, boundary, and construction surveys for water distribution infrastructure.</p>
+                    <div class="project-meta">
+                        <span class="project-date">Completed: 2022</span>
+                        <span class="project-status-badge">Completed</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card animate-on-scroll">
+                <div class="project-details">
+                    <h3>Green Park Development</h3>
+                    <p class="project-category"><i class="fas fa-home"></i> Sectional Property Surveys</p>
+                    <p class="project-description">Comprehensive sectional property surveys for the Green Park residential development, including boundary determination, subdivision plans, and title processing.</p>
+                    <div class="project-meta">
+                        <span class="project-date">Completed: 2023</span>
+                        <span class="project-status-badge">Completed</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 5 -->
+            <div class="project-card animate-on-scroll">
+                <div class="project-details">
+                    <h3>General Mathenge Apartments</h3>
+                    <p class="project-category"><i class="fas fa-building"></i> Sectional Property Survey</p>
+                    <p class="project-description">Precise sectional property surveys for the General Mathenge Apartments complex, ensuring accurate unit boundaries and common area delineation.</p>
+                    <div class="project-meta">
+                        <span class="project-date">Completed: 2022</span>
+                        <span class="project-status-badge">Completed</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 6 -->
+            <div class="project-card animate-on-scroll">
+                <div class="project-details">
+                    <h3>Purple Haze Apartments</h3>
+                    <p class="project-category"><i class="fas fa-building"></i> Residential Development</p>
+                    <p class="project-description">Comprehensive surveying services for the Purple Haze Apartments development, including topographic mapping, boundary surveys, and construction layout.</p>
+                    <div class="project-meta">
+                        <span class="project-date">Completed: 2022</span>
+                        <span class="project-status-badge">Completed</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 7 -->
+            <div class="project-card animate-on-scroll">
+                <div class="project-details">
+                    <h3>Mombasa Road Commercial Complex</h3>
+                    <p class="project-category"><i class="fas fa-city"></i> Commercial Development</p>
+                    <p class="project-description">Detailed topographic and engineering surveys for a large commercial complex along Mombasa Road, including site analysis and construction layout.</p>
+                    <div class="project-meta">
+                        <span class="project-date">Completed: 2023</span>
+                        <span class="project-status-badge">Completed</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 8 -->
+            <div class="project-card animate-on-scroll">
+                <div class="project-details">
+                    <h3>Thika Highway Infrastructure</h3>
+                    <p class="project-category"><i class="fas fa-road"></i> Infrastructure Survey</p>
+                    <p class="project-description">Comprehensive infrastructure surveying along Thika Highway, including road alignment, utility mapping, and topographic analysis for development planning.</p>
+                    <div class="project-meta">
+                        <span class="project-date">Completed: 2022</span>
+                        <span class="project-status-badge">Completed</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -2297,7 +2528,30 @@
                         </div>
                     </div>
                     
-                  
+                    <div class="form-step" data-step="3">
+                        <h4>Contact Information</h4>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="prev-step">Back</button>
+                            <button type="submit" class="submit-btn">Submit Inquiry</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -2327,6 +2581,7 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#projects-list">Project List</a></li>
                     <li><a href="#map">Location</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
