@@ -3,1447 +3,2641 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blith Imperial Trading Co. Ltd. | Forex Trading Experts</title>
+    <title>Terracore Spatial Consultants Ltd - Where Land Meets Technology</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="Terracore Spatial Consultants - Professional land surveying, drone mapping, and geospatial solutions in Kenya. Precision surveying services for construction, property, and infrastructure projects.">
+    <meta name="keywords" content="land surveying Kenya, drone mapping, geospatial consultants, property surveys, topographic surveys, GIS mapping, cadastral surveys, boundary surveys, aerial mapping Kenya">
+    <link rel="canonical" href="https://www.terracoreinternational.co.ke">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Terracore Spatial Consultants Ltd",
+      "description": "Professional land and geospatial surveying services in Kenya",
+      "url": "https://www.terracoreinternational.co.ke",
+      "telephone": "+254743553657",
+      "email": "info@terracoreinternational.co.ke",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nairobi",
+        "addressCountry": "KE"
+      },
+      "areaServed": "Kenya",
+      "serviceType": "Land Surveying, Drone Mapping, GIS Services",
+      "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-13:00"
+    }
+    </script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#1a3c34">
+    
     <style>
         :root {
-            --navy: #0A1931;
-            --gold: #D4AF37;
-            --light-gold: #F1E5AC;
-            --white: #FFFFFF;
-            --light-blue: #F5F7FA;
-            --gray: #666666;
-            --dark-gray: #333333;
+            --primary: #1a3c34;      /* Deep green - earth/land */
+            --secondary: #d4af37;    /* Gold - premium quality */
+            --accent: #2c5530;       /* Medium green */
+            --light: #f8f9fa;        /* Light background */
+            --dark: #2d3748;         /* Dark text */
+            --transition: all 0.3s ease;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--dark-gray);
             line-height: 1.6;
-            background-color: var(--white);
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
         }
         
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: var(--navy);
-            margin-bottom: 20px;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header & Navigation */
-        header {
-            background-color: var(--navy);
-            padding: 20px 0;
+        /* Header */
+        .header {
             position: fixed;
             width: 100%;
-            top: 0;
-            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 0.8rem 0;
         }
         
-        .header-container {
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
         
         .logo {
             display: flex;
             align-items: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
         }
         
         .logo-text {
-            color: var(--white);
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .company-name {
             font-weight: 700;
+            font-size: 1.3rem;
+            line-height: 1.2;
         }
         
-        .logo-text span {
-            color: var(--gold);
+        .company-tagline {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--accent);
         }
         
-        nav ul {
+        .nav-menu {
             display: flex;
             list-style: none;
+            gap: 1.5rem;
         }
         
-        nav ul li {
-            margin-left: 30px;
-        }
-        
-        nav ul li a {
-            color: var(--white);
+        .nav-menu li a {
             text-decoration: none;
+            color: var(--dark);
             font-weight: 500;
-            transition: color 0.3s;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
         }
         
-        nav ul li a:hover {
-            color: var(--gold);
+        .nav-menu li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary);
+            transition: var(--transition);
         }
         
-        .mobile-menu-btn {
-            display: none;
-            color: var(--white);
-            font-size: 24px;
-            background: none;
+        .nav-menu li a:hover:after {
+            width: 100%;
+        }
+        
+        .nav-menu li a:hover {
+            color: var(--primary);
+        }
+        
+        .contact-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
             border: none;
             cursor: pointer;
         }
         
-        /* Page Container */
-        .page {
+        .contact-btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(26, 60, 52, 0.3);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
             display: none;
-            padding-top: 100px;
-            min-height: 100vh;
+            flex-direction: column;
+            cursor: pointer;
         }
         
-        .page.active {
-            display: block;
+        .mobile-menu span {
+            height: 3px;
+            width: 25px;
+            background: var(--primary);
+            margin-bottom: 4px;
+            border-radius: 3px;
+            transition: var(--transition);
         }
         
-        /* Hero Section */
+        /* Hero Section with Image Background */
         .hero {
             position: relative;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: white;
             text-align: center;
-            color: var(--white);
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        
+        .image-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             overflow: hidden;
         }
         
-        .hero-video {
+        .image-background img {
+            min-width: 80%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             object-fit: cover;
-            z-index: -1;
         }
         
-        .hero-overlay {
+        .image-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 25, 49, 0.7);
-            z-index: -1;
+            background: linear-gradient(to bottom, rgba(26, 60, 52, 0.7), rgba(26, 60, 52, 0.5));
         }
         
         .hero-content {
             max-width: 800px;
-            padding: 20px;
-            z-index: 1;
+            z-index: 10;
         }
         
         .hero h1 {
             font-size: 3.5rem;
-            color: var(--white);
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 40px;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
         }
         
-        .btn {
-            display: inline-block;
-            background-color: var(--gold);
-            color: var(--navy);
-            padding: 15px 35px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: 2px solid var(--gold);
-        }
-        
-        .btn:hover {
-            background-color: transparent;
-            color: var(--gold);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            color: var(--gold);
-            border: 2px solid var(--gold);
-            margin-left: 15px;
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--gold);
-            color: var(--navy);
-        }
-        
-        /* Section Styling */
-        section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            display: inline-block;
-            position: relative;
-        }
-        
-        .section-title h2:after {
-            content: '';
-            display: block;
-            width: 70px;
-            height: 3px;
-            background: var(--gold);
-            margin: 15px auto 0;
-        }
-        
-        /* Calculator Section */
-        .calculator {
-            background-color: var(--light-blue);
-            padding: 80px 0;
-        }
-        
-        .calculator-container {
-            background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .calculator-header {
-            background-color: var(--navy);
-            color: var(--white);
-            padding: 20px 30px;
-            text-align: center;
-        }
-        
-        .calculator-header h2 {
-            color: var(--white);
-            margin-bottom: 10px;
-        }
-        
-        .calculator-content {
+        .cta-buttons {
             display: flex;
+            justify-content: center;
+            gap: 1rem;
             flex-wrap: wrap;
         }
         
-        .calculator-form {
-            flex: 1;
-            padding: 30px;
-            min-width: 300px;
-            background-color: var(--light-blue);
-        }
-        
-        .calculator-results {
-            flex: 1;
-            padding: 30px;
-            min-width: 300px;
-            background-color: var(--white);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
+        .cta-btn {
+            padding: 0.9rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
             font-weight: 600;
-            color: var(--navy);
-        }
-        
-        .form-group input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-        
-        .calculate-btn {
-            background-color: var(--gold);
-            color: var(--navy);
-            border: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            width: 100%;
-            font-size: 16px;
-        }
-        
-        .calculate-btn:hover {
-            background-color: var(--light-gold);
-        }
-        
-        .result-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .result-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .result-label {
-            font-weight: 500;
-            color: var(--dark-gray);
-        }
-        
-        .result-value {
-            font-weight: 600;
-            color: var(--navy);
-        }
-        
-        .result-highlight {
-            color: var(--gold);
-            font-size: 1.2rem;
-        }
-        
-        .monthly-breakdown {
-            margin-top: 30px;
-        }
-        
-        .monthly-breakdown h3 {
-            margin-bottom: 15px;
-            color: var(--navy);
-        }
-        
-        .breakdown-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .breakdown-table th,
-        .breakdown-table td {
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #eee;
-        }
-        
-        .breakdown-table th {
-            background-color: var(--light-blue);
-            color: var(--navy);
-        }
-        
-        .breakdown-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        
-        .deposits-control {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #f5f7fa;
-            border-radius: 8px;
-        }
-        
-        .deposits-control h4 {
-            margin-bottom: 15px;
-            color: var(--navy);
-        }
-        
-        .add-deposit-btn {
-            background-color: var(--navy);
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            margin-top: 10px;
-        }
-        
-        .deposit-item {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-            align-items: center;
-        }
-        
-        .deposit-item input {
-            flex: 1;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-        }
-        
-        .remove-deposit {
-            background-color: #ff4757;
-            color: white;
-            border: none;
-            width: 36px;
-            height: 36px;
-            borderRadius: 50%;
-            cursor: pointer;
+            transition: var(--transition);
+            display: inline-block;
+            min-height: 44px; /* Better touch targets */
             display: flex;
             align-items: center;
             justify-content: center;
         }
         
+        .cta-primary {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+        
+        .cta-primary:hover {
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--secondary);
+        }
+        
+        .cta-secondary:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Trust Badges Section */
+        .trust-badges {
+            padding: 3rem 2rem;
+            background: white;
+        }
+        
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--light);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+        
+        .badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .badge i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+        
+        .badge span {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
         /* About Section */
-        .about {
-            background-color: var(--white);
+        .about-section {
+            padding: 6rem 2rem;
+            background-color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .about-content {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
             align-items: center;
-            gap: 50px;
         }
         
         .about-text {
-            flex: 1;
+            padding-right: 2rem;
         }
         
         .about-image {
-            flex: 1;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
         .about-image img {
             width: 100%;
-            height: auto;
+            height: 400px;
+            object-fit: cover;
             display: block;
+            transition: var(--transition);
         }
         
-        /* CEO Message Section */
-        .ceo-section {
-            background: linear-gradient(135deg, #0A1931 0%, #1a3a6d 100%);
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .vision-mission {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .vision-box, .mission-box {
+            background: var(--light);
+            padding: 2rem;
             border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-            margin: 50px auto;
-            display: flex;
-            flex-direction: column;
+            border-left: 4px solid var(--secondary);
         }
         
-        .ceo-content {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .ceo-image {
-            flex: 1;
-            min-width: 300px;
-            background-color: #0c1f3c;
+        .vision-box h3, .mission-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 30px;
+            gap: 0.5rem;
         }
         
-        .ceo-image img {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 5px solid var(--gold);
-        }
-        
-        .ceo-message {
-            flex: 2;
-            min-width: 300px;
-            padding: 40px;
-            background-color: var(--white);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .ceo-message h3 {
-            font-size: 1.8rem;
-            color: var(--navy);
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid var(--gold);
-        }
-        
-        .message-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 25px;
-        }
-        
-        .message-text p {
-            margin-bottom: 20px;
-        }
-        
-        .ceo-signature {
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-            align-items: flex-start;
-        }
-        
-        .signature-image {
-            height: 60px;
-            width: 200px;
-            background-color: #f5f5f5;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-style: italic;
-            color: var(--gray);
-        }
-        
-        .ceo-name {
-            font-weight: 700;
-            color: var(--navy);
-            font-size: 1.2rem;
-        }
-        
-        .ceo-title {
-            color: var(--gold);
-            font-weight: 600;
-        }
-        
-        /* Services Section */
-        .services {
-            background-color: var(--light-blue);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-        
-        /* Values Section */
-        .values {
-            background-color: var(--white);
-        }
-        
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .value-card {
+        /* Services Banner */
+        .services-banner {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0;
             text-align: center;
-            padding: 30px 20px;
         }
         
-        .value-icon {
-            font-size: 2.5rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-        
-        /* How It Works Section */
-        .how-it-works {
-            background-color: var(--light-blue);
-        }
-        
-        .steps {
-            display: flex;
-            justify-content: space-between;
-            max-width: 900px;
+        .services-banner-content {
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 2rem;
         }
         
-        .step {
-            text-align: center;
-            flex: 1;
-            position: relative;
-            padding: 0 20px;
+        .services-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary);
         }
         
-        .step-number {
-            width: 50px;
-            height: 50px;
-            background-color: var(--gold);
-            color: var(--navy);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 20px;
-        }
-        
-        /* Benefits Section */
-        .benefits {
-            background-color: var(--navy);
-            color: var(--white);
-        }
-        
-        .benefits .section-title h2 {
-            color: var(--white);
-        }
-        
-        .benefits-grid {
+        .services-grid-banner {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
         
-        .benefit-card {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 30px;
+        .service-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
             border-radius: 10px;
-            transition: transform 0.3s;
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            cursor: pointer;
+            min-height: 180px; /* Better touch targets */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
-        .benefit-card:hover {
+        .service-item:hover {
+            background: rgba(255, 255, 255, 0.25);
             transform: translateY(-5px);
+            border-color: var(--secondary);
         }
         
-        .benefit-icon {
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-        
-        /* Video Section */
-        .video-section {
-            background-color: var(--white);
-            text-align: center;
-        }
-        
-        .video-container {
+        .service-item i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            display: block;
+            transition: all 0.4s ease;
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 10px;
+        }
+        
+        .service-item:hover i {
+            transform: scale(1.2) rotate(5deg);
+            color: #ffd700;
+        }
+        
+        .service-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Service Detail Modals */
+        .service-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+            background: none;
+            border: none;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Technology Section */
+        .technology-section {
+            padding: 6rem 2rem;
+            background-color: white;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .tech-category {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .video-container iframe,
-        .video-container video {
+        .tech-category h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .tech-category h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .tech-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--secondary);
+        }
+        
+        .tech-item i {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+        
+        .tech-item span {
+            font-weight: 600;
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        /* Skills Section */
+        .skills-section {
+            padding: 6rem 2rem;
+            background-color: var(--light);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-list i {
+            color: var(--secondary);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: var(--primary);
+            color: white;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--secondary);
+        }
+        
+        .testimonial-slider {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 2rem;
+        }
+        
+        .testimonial-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            color: var(--secondary);
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+        
+        /* Team Section */
+        .team-section {
+            padding: 6rem 2rem;
+            background-color: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--dark);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+        
+        .team-member {
+            background: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(26, 60, 52, 0.2);
+            border-color: var(--secondary);
+        }
+        
+        .member-photo {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .team-member:hover .member-photo img {
+            transform: scale(1.05);
+        }
+        
+        .member-overlay {
             position: absolute;
             top: 0;
             left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 60, 52, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .team-member:hover .member-overlay {
+            opacity: 1;
+        }
+        
+        .member-overlay .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .member-overlay .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .member-overlay .social-link:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+        
+        .member-info {
+            padding: 2rem;
+        }
+        
+        .member-name {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-position {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .member-bio {
+            color: var(--dark);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .member-expertise {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .expertise-tag {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .team-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: var(--light);
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .team-stats .stat-item {
+            padding: 1rem;
+        }
+        
+        .team-stats .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-stats .stat-label {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Projects Film Reel Section */
+        .projects-film-reel {
+            padding: 6rem 0;
+            background: var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .projects-film-reel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .film-reel-container {
+            position: relative;
+            margin: 3rem 0;
+            padding: 2rem 0;
+        }
+        
+        .film-reel-track {
+            display: flex;
+            animation: scroll-horizontal 40s linear infinite;
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+        
+        .film-reel-track:hover {
+            animation-play-state: paused;
+        }
+        
+        .film-reel-item {
+            flex: 0 0 350px;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .film-reel-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                45deg,
+                rgba(26, 60, 52, 0.1) 0%,
+                rgba(212, 175, 55, 0.05) 50%,
+                rgba(26, 60, 52, 0.1) 100%
+            );
+            z-index: 1;
+            transition: var(--transition);
+        }
+        
+        .film-reel-item:hover::before {
+            background: linear-gradient(
+                45deg,
+                rgba(26, 60, 52, 0.2) 0%,
+                rgba(212, 175, 55, 0.1) 50%,
+                rgba(26, 60, 52, 0.2) 100%
+            );
+        }
+        
+        .film-reel-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+            filter: brightness(0.9);
+        }
+        
+        .film-reel-item:hover .film-reel-image {
+            transform: scale(1.05);
+            filter: brightness(1);
+        }
+        
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(26, 60, 52, 0.9));
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+            z-index: 2;
+        }
+        
+        .film-reel-item:hover .project-overlay {
+            transform: translateY(0);
+        }
+        
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+        
+        .project-category {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .project-status i {
+            font-size: 0.7rem;
+        }
+        
+        /* Gradient Overlays for Depth */
+        .film-reel-container::before,
+        .film-reel-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 3;
+            pointer-events: none;
+        }
+        
+        .film-reel-container::before {
+            left: 0;
+            background: linear-gradient(90deg, var(--primary) 0%, transparent 100%);
+        }
+        
+        .film-reel-container::after {
+            right: 0;
+            background: linear-gradient(270deg, var(--primary) 0%, transparent 100%);
+        }
+        
+        /* Animation */
+        @keyframes scroll-horizontal {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-350px * 6 - 1.5rem * 6));
+            }
+        }
+        
+        /* Project Stats */
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-item {
+            text-align: center;
+            color: white;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* Map Section */
+        .map-section {
+            padding: 6rem 2rem;
+            background: var(--light);
+        }
+        
+        .map-container {
+            margin-top: 3rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+        
+        .map-container iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
         
-        /* CTA Section */
-        .cta {
-            text-align: center;
-            background: linear-gradient(rgba(10, 25, 49, 0.9), rgba(10, 25, 49, 0.9)), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            color: var(--white);
-            padding: 100px 0;
-            background-attachment: fixed;
-        }
-        
-        .cta h2 {
-            color: var(--white);
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 40px;
-            font-size: 1.1rem;
-        }
-        
         /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background-color: white;
+        }
+        
         .contact-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
         }
         
         .contact-info {
-            flex: 1;
-            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .contact-item p {
+            color: var(--dark);
+        }
+        
+        .contact-item a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+        
+        /* Multi-step Form */
+        .multi-step-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-step {
+            display: none;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        
+        .form-step h4 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        
+        .form-progress {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .form-progress:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #ddd;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        
+        .progress-step {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #ddd;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .progress-step.active {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+        
+        .progress-step.completed {
+            background: var(--secondary);
+            border-color: var(--secondary);
+            color: white;
         }
         
         .contact-form {
-            flex: 1;
-            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
         
         .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
+        .contact-form textarea,
+        .contact-form select {
+            padding: 1rem;
             border: 1px solid #ddd;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: white;
+            color: var(--dark);
         }
         
-        .contact-form textarea {
-            height: 150px;
-            resize: vertical;
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: var(--secondary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #888;
+        }
+        
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: 1rem;
+            min-height: 44px; /* Better touch targets */
+        }
+        
+        .submit-btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(26, 60, 52, 0.3);
+        }
+        
+        /* WhatsApp Integration */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
         }
         
         /* Footer */
-        footer {
-            background-color: var(--navy);
-            color: var(--white);
-            padding: 60px 0 30px;
+        .footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0 1rem;
         }
         
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
         
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+        .footer-section h3 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
         }
         
-        .footer-logo span {
-            color: var(--gold);
+        .footer-section p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
         }
         
-        .footer-contact p {
-            margin-bottom: 10px;
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-section a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.1);
             display: flex;
             align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            transition: var(--transition);
         }
         
-        .footer-contact i {
-            margin-right: 10px;
-            color: var(--gold);
+        .social-link:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-3px);
         }
         
         .footer-bottom {
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Focus styles for accessibility */
+        .contact-btn:focus, 
+        .nav-menu li a:focus,
+        .cta-btn:focus,
+        .service-item:focus,
+        .submit-btn:focus,
+        .close-modal:focus {
+            outline: 2px solid var(--secondary);
+            outline-offset: 2px;
         }
         
         /* Responsive Design */
-        @media (max-width: 992px) {
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .steps {
-                flex-direction: column;
-                gap: 40px;
-            }
-            
-            .calculator-content {
-                flex-direction: column;
-            }
-            
-            .ceo-content {
-                flex-direction: column;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                padding: 0 20px;
-            }
-            
-            nav ul {
+        @media screen and (max-width: 768px) {
+            .nav-menu {
                 display: none;
-                flex-direction: column;
                 position: absolute;
-                top: 80px;
+                top: 100%;
                 left: 0;
-                width: 100%;
-                background-color: var(--navy);
-                padding: 20px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem 0;
+                text-align: center;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             }
             
-            nav ul.show {
+            .nav-menu.active {
                 display: flex;
             }
             
-            nav ul li {
-                margin: 15px 0;
+            .mobile-menu {
+                display: flex;
             }
             
-            .mobile-menu-btn {
-                display: block;
+            .mobile-menu.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .mobile-menu.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .mobile-menu.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
             }
             
             .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .btn-outline {
-                margin-left: 0;
-                margin-top: 15px;
+            .hero p {
+                font-size: 1rem;
             }
             
-            .breakdown-table {
-                font-size: 0.8rem;
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
             
-            .ceo-image {
-                order: -1;
-                padding: 40px 30px;
+            .section-title, .category-title {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-text {
+                padding-right: 0;
+            }
+            
+            .vision-mission {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid-banner {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .team-stats {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+            
+            .team-stats .stat-number {
+                font-size: 2rem;
+            }
+            
+            .badges-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .film-reel-item {
+                flex: 0 0 280px;
+                height: 200px;
+            }
+            
+            @keyframes scroll-horizontal {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-280px * 6 - 1.5rem * 6));
+                }
+            }
+            
+            .film-reel-container::before,
+            .film-reel-container::after {
+                width: 50px;
+            }
+            
+            .project-stats {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .map-container {
+                height: 400px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .projects-film-reel {
+                padding: 4rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .team-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .member-photo {
+                height: 250px;
+            }
+            
+            .badges-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .film-reel-item {
+                flex: 0 0 220px;
+                height: 160px;
+            }
+            
+            @keyframes scroll-horizontal {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-220px * 6 - 1.5rem * 6));
+                }
+            }
+            
+            .project-overlay {
+                padding: 1rem;
+            }
+            
+            .project-title {
+                font-size: 1.1rem;
+            }
+            
+            .project-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .map-container {
+                height: 300px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-text">Blith <span>Imperial</span></div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/254743553657?text=Hi%20Terracore%20Spatial%20Consultants,%20I%20would%20like%20to%20inquire%20about%20your%20services" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Header -->
+<header class="header">
+    <nav class="nav-container">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1761805995/Terracore_logo-removebg-preview_qfkyvj.png" alt="Terracore Spatial Consultants Logo" loading="lazy">
+            <div class="logo-text">
+                <span class="company-name">TERRACORE SPATIAL</span>
+                <span class="company-tagline">CONSULTANTS LTD</span>
             </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul id="navMenu">
-                    <li><a href="#" data-page="home">Home</a></li>
-                    <li><a href="#" data-page="about">About Us</a></li>
-                    <li><a href="#" data-page="services">Services</a></li>
-                    <li><a href="#" data-page="how-it-works">How It Works</a></li>
-                    <li><a href="#" data-page="benefits">Benefits</a></li>
-                    <li><a href="#" data-page="contact">Contact</a></li>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#map">Location</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu"><span></span><span></span><span></span></div>
+        <a href="#contact" class="contact-btn">Get Quote</a>
+    </nav>
+</header>
+
+<!-- Hero Section with Image Background -->
+<section id="home" class="hero">
+    <div class="image-background">
+        <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757447625/IMG_20220929_093447_349_asnvnm.jpg" alt="Terracore Surveying Team" loading="eager">
+        <div class="image-overlay"></div>
+    </div>
+    <div class="hero-content">
+        <h1>Where Land Meets Technology</h1>
+        <p>Terracore Spatial Consultants Ltd is a professional land and geospatial surveying firm dedicated to delivering innovative, precise, and efficient spatial solutions across Kenya and beyond.</p>
+        <div class="cta-buttons">
+            <a href="#services" class="cta-btn cta-primary">Our Services</a>
+            <a href="#contact" class="cta-btn cta-secondary">Consult Our Experts</a>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Badges Section -->
+<section class="trust-badges">
+    <div class="container">
+        <div class="badges-grid">
+            <div class="badge animate-on-scroll">
+                <i class="fas fa-award"></i>
+                <span>Licensed Surveyors</span>
+            </div>
+            <div class="badge animate-on-scroll">
+                <i class="fas fa-shield-alt"></i>
+                <span>Fully Insured</span>
+            </div>
+            <div class="badge animate-on-scroll">
+                <i class="fas fa-certificate"></i>
+                <span>ISO Certified</span>
+            </div>
+            <div class="badge animate-on-scroll">
+                <i class="fas fa-clock"></i>
+                <span>24-48 Hour Quotes</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title animate-on-scroll">About Terracore Spatial Consultants</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="animate-on-scroll">Terracore Spatial Consultants Ltd is a professional land and geospatial surveying firm dedicated to delivering innovative, precise, and efficient spatial solutions across Kenya and beyond. We combine advanced surveying technologies with extensive field experience to provide clients with accurate data for informed decision-making.</p>
+                <p class="animate-on-scroll">Our team comprises highly skilled professionals with expertise in land surveying, mapping, civil works, GIS, and drone technology. We pride ourselves on integrity, professionalism, and commitment to excellence in every project we undertake.</p>
+                
+                <div class="vision-mission">
+                    <div class="vision-box animate-on-scroll">
+                        <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                        <p>To be a leading provider of geospatial and land surveying solutions through innovation, technology, and professionalism.</p>
+                    </div>
+                    <div class="mission-box animate-on-scroll">
+                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                        <p>To deliver accurate, reliable, and technology-driven spatial data that empowers infrastructure development and land management.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image animate-on-scroll">
+                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757454387/IMG_20221027_113243_995_nd6dwv.jpg" alt="Terracore Team at Work" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Banner -->
+<section id="services" class="services-banner">
+    <div class="services-banner-content">
+        <h2>Our Land Surveying Services</h2>
+        <div class="services-grid-banner">
+            <div class="service-item" data-service="land-surveying">
+                <i class="fas fa-ruler-combined"></i>
+                <h3>Land, Topographical & Engineering Surveys</h3>
+            </div>
+            <div class="service-item" data-service="cadastral">
+                <i class="fas fa-draw-polygon"></i>
+                <h3>Sectional Property & Boundary Surveys</h3>
+            </div>
+            <div class="service-item" data-service="topographic">
+                <i class="fas fa-mountain"></i>
+                <h3>Setting Out & As-Built Surveys</h3>
+            </div>
+            <div class="service-item" data-service="construction">
+                <i class="fas fa-hard-hat"></i>
+                <h3>Cadastral & Property Subdivision</h3>
+            </div>
+            <div class="service-item" data-service="boundary">
+                <i class="fas fa-border-all"></i>
+                <h3>Aerial Mapping & Drone Surveys</h3>
+            </div>
+            <div class="service-item" data-service="subdivision">
+                <i class="fas fa-th-large"></i>
+                <h3>GIS Mapping & Data Analysis</h3>
+            </div>
+            <div class="service-item" data-service="drone">
+                <i class="fas fa-drone"></i>
+                <h3>Construction Surveying</h3>
+            </div>
+            <div class="service-item" data-service="consultancy">
+                <i class="fas fa-chart-line"></i>
+                <h3>Title Processing & Mutation Form Preparation</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-track">
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            "Terracore Spatial Consultants delivered exceptional surveying services for our water project in Kisumu. Their attention to detail and professionalism was outstanding."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <h4>James Mwangi</h4>
+                                <p>Project Manager, Zhonghau Construction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Section -->
+<section id="technology" class="technology-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title animate-on-scroll">Our Equipment & Technology</h2>
+            <p class="section-subtitle animate-on-scroll">We utilize state-of-the-art surveying equipment and software for precision and efficiency.</p>
+        </div>
+        
+        <div class="tech-grid">
+            <div class="tech-category animate-on-scroll">
+                <h3>Surveying Equipment</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fas fa-satellite"></i>
+                        <span>DJI Phantom 4 RTK Drone</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-satellite-dish"></i>
+                        <span>Trimble GNSS Receiver</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-crosshairs"></i>
+                        <span>Leica Total Station</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-ruler-combined"></i>
+                        <span>Auto Level</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category animate-on-scroll">
+                <h3>Software Solutions</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fas fa-cube"></i>
+                        <span>AutoCAD Civil 3D</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-drafting-compass"></i>
+                        <span>LISCAD</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-map"></i>
+                        <span>ArcGIS</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-globe"></i>
+                        <span>QGIS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category animate-on-scroll">
+                <h3>Advanced Technologies</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fas fa-dragon"></i>
+                        <span>LiDAR Technology</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-cloud"></i>
+                        <span>GIS Integration</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <span>Photogrammetry</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-database"></i>
+                        <span>Data Analysis Tools</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title animate-on-scroll">Our Key Skills</h2>
+            <p class="section-subtitle animate-on-scroll">Expertise in land surveying, mapping, and spatial data analysis.</p>
+        </div>
+        
+        <div class="skills-grid">
+            <div class="skill-category animate-on-scroll">
+                <h3>Surveying Expertise</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Land, Topographic & Cadastral Surveys</li>
+                    <li><i class="fas fa-check"></i> Sectional Property Surveys</li>
+                    <li><i class="fas fa-check"></i> Boundary & Real Estate Subdivision</li>
+                    <li><i class="fas fa-check"></i> Levelling, Setting-Out & As-Built Surveys</li>
+                    <li><i class="fas fa-check"></i> GPS, Auto Level & Total Station Operation</li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <!-- Home Page -->
-    <div id="home" class="page active">
-        <!-- Hero Section -->
-        <section class="hero">
-            <video autoplay muted loop class="hero-video">
-                <source src="https://res.cloudinary.com/dnxtuowlp/video/upload/v1757238455/vecteezy_business-candle-stick-graph-chart-of-stock-market-investment_15279082_ck3e9t.mov" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="hero-overlay"></div>
-
-            <div class="hero-content">
-                <h1>Democratizing Access to Forex Markets</h1>
-                <p>Blith Imperial Trading Co. Ltd. provides innovative trading solutions where investors thrive alongside seasoned professionals.</p>
-                <a href="#" data-page="services" class="btn">Start Investing</a>
-                <a href="#" data-page="about" class="btn btn-outline">Learn More</a>
             </div>
-        </section>
-
-        <!-- Calculator Section -->
-        <section class="calculator">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Profit Calculator</h2>
-                    <p>See how much you can earn with our forex trading services</p>
-                </div>
-                <div class="calculator-container">
-                    <div class="calculator-header">
-                        <h2>Forex Investment Calculator</h2>
-                        <p>25% monthly returns | 25% performance fee on profits</p>
-                    </div>
-                    <div class="calculator-content">
-                        <div class="calculator-form">
-                            <div class="form-group">
-                                <label for="initialDeposit">Initial Deposit ($)</label>
-                                <input type="number" id="initialDeposit" placeholder="Enter amount" value="50000" min="0">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="months">Number of Months</label>
-                                <input type="number" id="months" placeholder="Enter months" value="3" min="1" max="36">
-                            </div>
-                            
-                            <div class="deposits-control">
-                                <h4>Additional Deposits</h4>
-                                <p>Specify additional deposits for specific months</p>
-                                
-                                <div id="depositsContainer">
-                                    <!-- Deposits will be added here dynamically -->
-                                </div>
-                                
-                                <button type="button" class="add-deposit-btn" id="addDepositBtn">
-                                    <i class="fas fa-plus"></i> Add Deposit
-                                </button>
-                            </div>
-                            
-                            <button class="calculate-btn" id="calculateBtn">Calculate Projection</button>
-                        </div>
-                        
-                        <div class="calculator-results">
-                            <h3>Projected Results</h3>
-                            <div class="result-item">
-                                <span class="result-label">Initial Investment:</span>
-                                <span class="result-value" id="initialInvestment">$50,000.00</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-label">Total Additional Deposits:</span>
-                                <span class="result-value" id="totalAdditional">$100,000.00</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-label">Total Profits:</span>
-                                <span class="result-value" id="totalProfits">$39,843.75</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-label">Performance Fees (25%):</span>
-                                <span class="result-value" id="performanceFees">$9,960.94</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-label">Net Profits:</span>
-                                <span class="result-value result-highlight" id="netProfits">$29,882.81</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-label">Final Balance:</span>
-                                <span class="result-value result-highlight" id="finalBalance">$179,882.81</span>
-                            </div>
-                            
-                            <div class="note">
-                                <p><strong>Note:</strong> Calculations assume 25% monthly returns on the investment balance. Blith Imperial charges a 25% performance fee on profits.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="monthly-breakdown">
-                        <div class="container">
-                            <h3>Monthly Breakdown</h3>
-                            <table class="breakdown-table">
-                                <thead>
-                                    <tr>
-                                        <th>Month</th>
-                                        <th>Starting Balance</th>
-                                        <th>Additional Deposit</th>
-                                        <th>Investment Balance</th>
-                                        <th>Monthly Profit (25%)</th>
-                                        <th>Performance Fee (25%)</th>
-                                        <th>Net Profit</th>
-                                        <th>Ending Balance</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="breakdownBody">
-                                    <!-- JavaScript will populate this -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Video Section -->
-        <section class="video-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Why Choose Blith Imperial?</h2>
-                    <p>Watch our CEO explain what makes us different</p>
-                </div>
-                <div class="video-container">
-                    <video controls>
-                        <source src="https://res.cloudinary.com/dnxtuowlp/video/upload/v1757238439/Ian_Blith_v01pzg.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta">
-            <div class="container">
-                <h2>Start Your Investment Journey Today</h2>
-                <p>Join Blith Imperial Trading Co. Ltd. and experience the synergy of expertise and innovation where success knows no bounds.</p>
-                <a href="#" data-page="contact" class="btn">Get Started</a>
-            </div>
-        </section>
-    </div>
-
-    <!-- About Page -->
-    <div id="about" class="page">
-        <div class="container">
-            <!-- CEO Message Section -->
-            <section class="ceo-section">
-                <div class="ceo-content">
-                    <div class="ceo-image">
-                        <!-- Using a placeholder image since no CEO image was provided -->
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CEO of Blith Imperial Trading Co. Ltd">
-                    </div>
-                    
-                    <div class="ceo-message">
-                        <h3>Greetings from Our CEO</h3>
-                        
-                        <div class="message-text">
-                            <p>Dear Valued Investors & Traders,</p>
-                            <p>Welcome to Blith Imperial Trading Co. Ltd, an exceptional trading entity proudly operating under the esteemed umbrella of Blith Imperial Holdings.</p>
-                            <p>As the CEO, I am honored to extend my warmest greetings to both novice and experienced investors alike.</p>
-                            <p>At Blith Imperial Trading Co. Ltd, we have cultivated a wealth of experience and expertise in the dynamic world of financial markets. Our unwavering commitment revolves around empowering you, our valued investors & traders, through cutting-edge solutions in forex copy trading and proprietary trading.</p>
-                        </div>
-                        
-                        <div class="ceo-signature">
-                            <div class="signature-image">Signature</div>
-                            <div class="ceo-name">Ian Blith</div>
-                            <div class="ceo-title">Chief Executive Officer</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="about">
-                <div class="section-title">
-                    <h2>About Us</h2>
-                </div>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Blith Imperial Trading Co. Ltd stands as a beacon of excellence in the financial industry. As a part of the Blith Imperial Holdings group, we leverage a legacy of trust, integrity, and success.</p>
-                        <p>Our mission is to democratize access to the forex market, offering a platform where investors can thrive alongside seasoned professionals. We believe in providing a secure and empowering environment for investors to navigate the complexities of the forex market consistently.</p>
-                        <p>Through cutting-edge technology, ethical practices, and a relentless pursuit of excellence, we aim to be the catalyst for our clients' financial success.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Trading Office">
-                    </div>
-                </div>
-            </section>
-
-            <section class="values">
-                <div class="section-title">
-                    <h2>Our Values</h2>
-                </div>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3>Trust</h3>
-                        <p>We build long-term relationships based on transparency, reliability, and integrity in all our operations.</p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Innovation</h3>
-                        <p>We continuously evolve our strategies and technology to stay ahead in the dynamic forex market.</p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h3>Client Success</h3>
-                        <p>Your financial success is our ultimate goal. We're committed to helping you achieve your investment objectives.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Video Section -->
-            <section class="video-section">
-                <div class="section-title">
-                    <h2>Our Trading Philosophy</h2>
-                </div>
-                <div class="video-container">
-                    <video controls>
-                        <source src="https://res.cloudinary.com/dnxtuowlp/video/upload/v1757238449/vecteezy_forex-trading-investor-financial-analyst-stock-market-chart_26389051_lz7zcn.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!-- Services Page -->
-    <div id="services" class="page">
-        <div class="container">
-            <section class="services">
-                <div class="section-title">
-                    <h2>Our Services</h2>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-copy"></i>
-                        </div>
-                        <h3>Forex Copy Trading</h3>
-                        <p>Harness the expertise of accomplished forex traders by allowing our investors to copy their trades. Our user-friendly platform offers transparent performance tracking through well-regulated FX brokers.</p>
-                        <ul>
-                            <li>Customizable risk preferences</li>
-                            <li>Transparent performance tracking</li>
-                            <li>User-friendly platform</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Proprietary Trading</h3>
-                        <p>Our in-house team of skilled traders executes diversified strategies using a blend of manual and algorithmic trading techniques for optimal results.</p>
-                        <ul>
-                            <li>Diversified trading strategies</li>
-                            <li>Blend of manual and algorithmic trading</li>
-                            <li>Emphasis on risk management</li>
-                            <li>Traders recruitment for new accounts</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Video Section -->
-            <section class="video-section">
-                <div class="section-title">
-                    <h2>How Copy Trading Works</h2>
-                </div>
-                <div class="video-container">
-                    <video controls>
-                        <source src="https://res.cloudinary.com/dnxtuowlp/video/upload/v1757238455/vecteezy_business-candle-stick-graph-chart-of-stock-market-investment_15279082_ck3e9t.mov" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!-- How It Works Page -->
-    <div id="how-it-works" class="page">
-        <div class="container">
-            <section class="how-it-works">
-                <div class="section-title">
-                    <h2>How It Works</h2>
-                </div>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Open Account</h3>
-                        <p>Open and verify your account using our links to the regulated brokers we use.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Verify Account</h3>
-                        <p>Complete the verification process by submitting the required documents.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Copy Trades</h3>
-                        <p>Follow and copy our strategy account as designated. Sit back and watch your investments grow.</p>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-    </div>
-
-    <!-- Benefits Page -->
-    <div id="benefits" class="page">
-        <div class="container">
-            <section class="benefits">
-                <div class="section-title">
-                    <h2>Why Trade With Us</h2>
-                </div>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <h3>Potential Returns</h3>
-                        <p>Potential returns of 25% minimum per month through our expert trading strategies.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Regulated Brokers</h3>
-                        <p>We work exclusively with regulated brokers to ensure the security of your investments.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <h3>Capital Protection</h3>
-                        <p>We trade our capital and only earn when you profit, aligning our interests with yours.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-money-bill-wave"></i>
-                        </div>
-                        <h3>Seamless Payouts</h3>
-                        <p>Automatic profit split with a performance fee of just 25% on generated returns.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Video Section -->
-            <section class="video-section">
-                <div class="section-title">
-                    <h2>Client Success Stories</h2>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/6GWLt8sLIVM" title="Client Testimonials" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!-- Contact Page -->
-    <div id="contact" class="page">
-        <div class="container">
-            <section class="contact">
-                <div class="section-title">
-                    <h2>Contact Us</h2>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Get In Touch</h3>
-                        <p>Have questions about our services or ready to start investing? Reach out to our team for more information.</p>
-                        <div class="contact-details">
-                            <p><i class="fas fa-envelope"></i> blithimperialltd@gmail.com</p>
-                            <p><i class="fas fa-map-marker-alt"></i> Strategically located in a key financial center</p>
-                        </div>
-                    </div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">Blith <span>Imperial</span></div>
-                    <p>Blith Imperial Trading Co. Ltd provides innovative trading solutions where investors thrive alongside seasoned professionals.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#" data-page="home">Home</a></li>
-                        <li><a href="#" data-page="about">About Us</a></li>
-                        <li><a href="#" data-page="services">Services</a></li>
-                        <li><a href="#" data-page="how-it-works">How It Works</a></li>
-                        <li><a href="#" data-page="benefits">Benefits</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-envelope"></i> blithimperialltd@gmail.com</p>
-                    <p><i class="fas fa-globe"></i> www.blithimperial.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Blith Imperial Trading Co. Ltd. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Page Navigation
-        const pages = document.querySelectorAll('.page');
-        const navLinks = document.querySelectorAll('nav a');
-        
-        function showPage(pageId) {
-            pages.forEach(page => {
-                page.classList.remove('active');
-            });
-            document.getElementById(pageId).classList.add('active');
             
-            // Update URL hash
-            window.location.hash = pageId;
+            <div class="skill-category animate-on-scroll">
+                <h3>Technical Skills</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> AutoCAD Civil 3D, LISCAD & Global Mapper</li>
+                    <li><i class="fas fa-check"></i> Title Processing & Mutation Forms</li>
+                    <li><i class="fas fa-check"></i> Survey Documentation</li>
+                    <li><i class="fas fa-check"></i> Survey Control & Benchmark Establishment</li>
+                    <li><i class="fas fa-check"></i> Data Collection, Analysis & Mapping</li>
+                </ul>
+            </div>
             
-            // Scroll to top
-            window.scrollTo(0, 0);
-        }
+            <div class="skill-category animate-on-scroll">
+                <h3>Professional Skills</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Project Coordination</li>
+                    <li><i class="fas fa-check"></i> Documentation</li>
+                    <li><i class="fas fa-check"></i> Strong Communication</li>
+                    <li><i class="fas fa-check"></i> Teamwork & Collaboration</li>
+                    <li><i class="fas fa-check"></i> Quality Assurance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="team-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title animate-on-scroll">Our Management Team</h2>
+            <p class="section-subtitle animate-on-scroll">Meet the skilled professionals behind Terracore Spatial Consultants.</p>
+        </div>
         
-        // Set up navigation
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const pageId = link.getAttribute('data-page');
-                showPage(pageId);
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-member animate-on-scroll">
+                <div class="member-photo">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Clifford Juma - Managing Director" loading="lazy">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Clifford Juma</h3>
+                    <p class="member-position">Managing Director</p>
+                    <p class="member-bio">Strategic leader with extensive experience in land surveying and business management. Oversees company operations and client relations.</p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Business Strategy</span>
+                        <span class="expertise-tag">Client Relations</span>
+                        <span class="expertise-tag">Project Management</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="team-member animate-on-scroll">
+                <div class="member-photo">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="John Sagwe - Quantity Surveyor" loading="lazy">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">John Sagwe</h3>
+                    <p class="member-position">Quantity Surveyor</p>
+                    <p class="member-bio">Expert in cost management, contract administration, and project valuation for construction and surveying projects.</p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Cost Management</span>
+                        <span class="expertise-tag">Contract Administration</span>
+                        <span class="expertise-tag">Project Valuation</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 3 -->
+            <div class="team-member animate-on-scroll">
+                <div class="member-photo">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="John Chogo - Survey & Drone Expert" loading="lazy">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">John Chogo</h3>
+                    <p class="member-position">Survey & Drone Expert</p>
+                    <p class="member-bio">Specialist in drone operations, aerial mapping, and advanced surveying technologies. Certified UAV pilot with extensive field experience.</p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Drone Operations</span>
+                        <span class="expertise-tag">Aerial Mapping</span>
+                        <span class="expertise-tag">Advanced Surveying</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 4 -->
+            <div class="team-member animate-on-scroll">
+                <div class="member-photo">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="John - Assistant Surveyor" loading="lazy">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">John</h3>
+                    <p class="member-position">Assistant Surveyor</p>
+                    <p class="member-bio">Field surveying specialist with expertise in data collection, equipment operation, and site measurements.</p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Field Surveying</span>
+                        <span class="expertise-tag">Data Collection</span>
+                        <span class="expertise-tag">Equipment Operation</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 5 -->
+            <div class="team-member animate-on-scroll">
+                <div class="member-photo">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Brian Akata - Civil Engineer" loading="lazy">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Brian Akata</h3>
+                    <p class="member-position">Civil Engineer</p>
+                    <p class="member-bio">Civil engineering expert with specialization in infrastructure design, construction supervision, and project management.</p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Infrastructure Design</span>
+                        <span class="expertise-tag">Construction Supervision</span>
+                        <span class="expertise-tag">Project Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="team-stats animate-on-scroll">
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Professional Certifications</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Client Satisfaction</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Film Reel Section -->
+<section id="projects" class="projects-film-reel">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" style="color: var(--secondary);">Our Completed Projects</h2>
+            <p class="section-subtitle" style="color: var(--secondary);">Showcasing our expertise in land surveying and spatial solutions across Kenya</p>
+        </div>
+
+        <div class="film-reel-container">
+            <div class="film-reel-track">
+                <!-- Project 1 -->
+                <div class="film-reel-item">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757447625/IMG_20220929_093447_349_asnvnm.jpg" alt="KAWASCO Water Project" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">KAWASCO Water Project</h3>
+                        <p class="project-category">Water & Sewer Infrastructure</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="film-reel-item">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757454387/IMG_20221027_113243_995_nd6dwv.jpg" alt="NAWASCO Water Project" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">NAWASCO Water Project</h3>
+                        <p class="project-category">Water Infrastructure Survey</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="film-reel-item">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Rift Valley Water Works" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Rift Valley Water Works</h3>
+                        <p class="project-category">Multi-year Water Project</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="film-reel-item">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Green Park Development" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Green Park Development</h3>
+                        <p class="project-category">Sectional Property Surveys</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="film-reel-item">
+                    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="General Mathenge Apartments" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">General Mathenge Apartments</h3>
+                        <p class="project-category">Sectional Property Survey</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="film-reel-item">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Purple Haze Apartments" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Purple Haze Apartments</h3>
+                        <p class="project-category">Residential Development</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Duplicate items for seamless loop -->
+                <!-- Project 1 Duplicate -->
+                <div class="film-reel-item">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757447625/IMG_20220929_093447_349_asnvnm.jpg" alt="KAWASCO Water Project" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">KAWASCO Water Project</h3>
+                        <p class="project-category">Water & Sewer Infrastructure</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 Duplicate -->
+                <div class="film-reel-item">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1757454387/IMG_20221027_113243_995_nd6dwv.jpg" alt="NAWASCO Water Project" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">NAWASCO Water Project</h3>
+                        <p class="project-category">Water Infrastructure Survey</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 Duplicate -->
+                <div class="film-reel-item">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Rift Valley Water Works" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Rift Valley Water Works</h3>
+                        <p class="project-category">Multi-year Water Project</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 Duplicate -->
+                <div class="film-reel-item">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Green Park Development" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Green Park Development</h3>
+                        <p class="project-category">Sectional Property Surveys</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 Duplicate -->
+                <div class="film-reel-item">
+                    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="General Mathenge Apartments" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">General Mathenge Apartments</h3>
+                        <p class="project-category">Sectional Property Survey</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 Duplicate -->
+                <div class="film-reel-item">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Purple Haze Apartments" class="film-reel-image" loading="lazy">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Purple Haze Apartments</h3>
+                        <p class="project-category">Residential Development</p>
+                        <span class="project-status"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Stats -->
+        <div class="project-stats">
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Cities Covered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section id="map" class="map-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title animate-on-scroll">Our Location</h2>
+            <p class="section-subtitle animate-on-scroll">Find us in Nairobi, Kenya. We serve clients across the country with our professional surveying services.</p>
+        </div>
+        
+        <div class="map-container animate-on-scroll">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63841.60735474651!2d36.70844245!3d-1.30316895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1692625932456!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <div class="contact-info" style="margin-top: 3rem;">
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                    <h3>Our Office Location</h3>
+                    <p>Nairobi, Kenya</p>
+                    <p>We operate throughout Kenya with our main office located in Nairobi. Contact us to schedule a site visit or consultation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Contact Us</h2>
+        <p class="section-subtitle animate-on-scroll">Ready to discuss your land surveying project? Get in touch with our experts.</p>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">🌐</div>
+                    <p>Website: <a href="https://www.terracoreinternational.co.ke" target="_blank">www.terracoreinternational.co.ke</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <p>Email: <a href="mailto:info@terracoreinternational.co.ke">info@terracoreinternational.co.ke</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <p>Phone: <a href="tel:+254743553657">+254 743 553 657</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <p>Location: Nairobi, Kenya</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <p>Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 1:00 PM</p>
+                </div>
+            </div>
+            
+            <!-- Multi-step Form -->
+            <div class="multi-step-form animate-on-scroll">
+                <div class="form-progress">
+                    <div class="progress-step active" data-step="1">1</div>
+                    <div class="progress-step" data-step="2">2</div>
+                    <div class="progress-step" data-step="3">3</div>
+                </div>
                 
+                <form id="multi-step-form">
+                    <div class="form-step active" data-step="1">
+                        <h4>Project Details</h4>
+                        <div class="form-group">
+                            <label for="inquiry-type">Inquiry Type</label>
+                            <select id="inquiry-type" name="inquiry-type" required>
+                                <option value="">Select Inquiry Type</option>
+                                <option value="service">Service Inquiry</option>
+                                <option value="career">Career Opportunity</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-type-form">Project Type</label>
+                            <select id="project-type-form" name="project-type">
+                                <option value="">Select Project Type</option>
+                                <option value="land-surveying">Land Surveying</option>
+                                <option value="topographical">Topographical Survey</option>
+                                <option value="boundary">Boundary Survey</option>
+                                <option value="sectional">Sectional Property</option>
+                                <option value="subdivision">Property Subdivision</option>
+                                <option value="drone">Drone Survey</option>
+                                <option value="construction">Construction Surveying</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-description-form">Project Description</label>
+                            <textarea id="project-description-form" name="project-description" rows="4" placeholder="Briefly describe your project..."></textarea>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="next-step">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" data-step="2">
+                        <h4>Your Requirements</h4>
+                        <div class="form-group">
+                            <label for="budget">Estimated Budget</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select Budget Range</option>
+                                <option value="under-10k">Under KSh 100,000</option>
+                                <option value="10k-50k">KSh 100,000 - 500,000</option>
+                                <option value="50k-100k">KSh 500,000 - 1,000,000</option>
+                                <option value="over-100k">Over KSh 1,000,000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">Project Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select Timeline</option>
+                                <option value="urgent">Urgent (Within 1 month)</option>
+                                <option value="short">Short-term (1-3 months)</option>
+                                <option value="medium">Medium-term (3-6 months)</option>
+                                <option value="long">Long-term (6+ months)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="specific-requirements">Specific Requirements</label>
+                            <textarea id="specific-requirements" name="specific-requirements" rows="4" placeholder="Any specific requirements or constraints..."></textarea>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="prev-step">Back</button>
+                            <button type="button" class="next-step">Next</button>
+                        </div>
+                    </div>
+                    
+                  
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Terracore Spatial Consultants</h3>
+                <p>Where Land Meets Technology. Professional land and geospatial surveying solutions across Kenya and beyond.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: var(--secondary);">Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#technology">Technology</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#map">Location</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: var(--secondary);">Our Services</h3>
+                <ul>
+                    <li><a href="#services">Land & Topographical Surveys</a></li>
+                    <li><a href="#services">Sectional Property Surveys</a></li>
+                    <li><a href="#services">Boundary & Subdivision Surveys</a></li>
+                    <li><a href="#services">Aerial Mapping & Drone Surveys</a></li>
+                    <li><a href="#services">GIS Mapping & Data Analysis</a></li>
+                    <li><a href="#services">Construction Surveying</a></li>
+                    <li><a href="#services">Title Processing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: var(--secondary);">Contact Info</h3>
+                <p><i class="fas fa-globe"></i> www.terracoreinternational.co.ke</p>
+                <p><i class="fas fa-envelope"></i> info@terracoreinternational.co.ke</p>
+                <p><i class="fas fa-phone"></i> +254 743 553 657</p>
+                <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Terracore Spatial Consultants Ltd. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- Service Detail Modals -->
+<div id="service-modal" class="service-modal">
+    <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div id="modal-content"></div>
+    </div>
+</div>
+
+<script>
+    // Mobile Menu Toggle
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+    });
+
+    // Scroll Animations
+    const scrollElements = document.querySelectorAll('.animate-on-scroll');
+
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('active');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('active');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
+        })
+    };
+
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+
+    // Initialize scroll animations on page load
+    window.addEventListener('load', () => {
+        handleScrollAnimation();
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
                 // Close mobile menu if open
-                if (navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
-                }
-            });
-        });
-        
-        // Check URL hash on load
-        window.addEventListener('load', () => {
-            const hash = window.location.hash.substring(1);
-            if (hash && document.getElementById(hash)) {
-                showPage(hash);
+                navMenu.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
             }
-            
-            // Calculate initial projection
-            calculateProjection();
         });
-        
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
-        
-        // Profit Calculator
-        const calculateBtn = document.getElementById('calculateBtn');
-        const addDepositBtn = document.getElementById('addDepositBtn');
-        const depositsContainer = document.getElementById('depositsContainer');
-        
-        calculateBtn.addEventListener('click', calculateProjection);
-        addDepositBtn.addEventListener('click', addDepositField);
-        
-        // Add initial deposit field
-        addDepositField();
-        
-        function addDepositField() {
-            const depositItem = document.createElement('div');
-            depositItem.className = 'deposit-item';
-            depositItem.innerHTML = `
-                <input type="number" placeholder="Month number" class="deposit-month" min="2" value="2">
-                <input type="number" placeholder="Amount ($)" class="deposit-amount" value="100000">
-                <button type="button" class="remove-deposit"><i class="fas fa-times"></i></button>
-            `;
-            
-            depositsContainer.appendChild(depositItem);
-            
-            // Add event listener to remove button
-            const removeBtn = depositItem.querySelector('.remove-deposit');
-            removeBtn.addEventListener('click', function() {
-                depositsContainer.removeChild(depositItem);
-            });
+    });
+
+    // Service Detail Modals
+    const serviceModal = document.getElementById('service-modal');
+    const modalContent = document.getElementById('modal-content');
+    const closeModal = document.querySelector('.close-modal');
+
+    const serviceDetails = {
+        'land-surveying': {
+            title: 'Land, Topographical & Engineering Surveys',
+            description: 'Comprehensive land surveying services including boundary determination, topographic mapping, and engineering surveys for construction projects.',
+            features: ['Boundary Surveys', 'Topographic Mapping', 'Engineering Surveys', 'Site Analysis'],
+            icon: 'fas fa-ruler-combined'
+        },
+        'cadastral': {
+            title: 'Sectional Property & Boundary Surveys',
+            description: 'Professional sectional property surveys for multi-unit developments and precise boundary determination for property transactions.',
+            features: ['Sectional Property Surveys', 'Boundary Determination', 'Property Transfers', 'Title Processing'],
+            icon: 'fas fa-draw-polygon'
+        },
+        'topographic': {
+            title: 'Setting Out & As-Built Surveys',
+            description: 'Precise setting out services for construction projects and as-built surveys to verify construction against design plans.',
+            features: ['Construction Setting Out', 'As-Built Surveys', 'Alignment Surveys', 'Construction Verification'],
+            icon: 'fas fa-mountain'
+        },
+        'construction': {
+            title: 'Cadastral & Property Subdivision',
+            description: 'Expert cadastral surveying and property subdivision services for land development and real estate projects.',
+            features: ['Cadastral Surveys', 'Property Subdivision', 'Land Parceling', 'Development Planning'],
+            icon: 'fas fa-hard-hat'
+        },
+        'boundary': {
+            title: 'Aerial Mapping & Drone Surveys',
+            description: 'Advanced aerial mapping using drone technology for large-area surveys, 3D modeling, and topographic mapping.',
+            features: ['Aerial Photography', '3D Modeling', 'Orthomosaic Maps', 'Volume Calculations'],
+            icon: 'fas fa-border-all'
+        },
+        'subdivision': {
+            title: 'GIS Mapping & Data Analysis',
+            description: 'Geographic Information System (GIS) services for spatial data analysis, mapping, and decision support systems.',
+            features: ['GIS Mapping', 'Spatial Analysis', 'Data Management', 'Decision Support'],
+            icon: 'fas fa-th-large'
+        },
+        'drone': {
+            title: 'Construction Surveying',
+            description: 'Comprehensive construction surveying services including site layout, grading, and monitoring throughout the construction process.',
+            features: ['Site Layout', 'Grading Surveys', 'Construction Monitoring', 'Progress Tracking'],
+            icon: 'fas fa-drone'
+        },
+        'consultancy': {
+            title: 'Title Processing & Mutation Form Preparation',
+            description: 'Professional assistance with title processing, mutation forms, and land registration documentation.',
+            features: ['Title Processing', 'Mutation Forms', 'Land Registration', 'Document Preparation'],
+            icon: 'fas fa-chart-line'
         }
-        
-        function calculateProjection() {
-            const initialDeposit = parseFloat(document.getElementById('initialDeposit').value) || 0;
-            const months = parseInt(document.getElementById('months').value) || 1;
+    };
+
+    document.querySelectorAll('.service-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const serviceId = this.getAttribute('data-service');
+            const service = serviceDetails[serviceId];
             
-            // Get additional deposits
-            const depositItems = depositsContainer.querySelectorAll('.deposit-item');
-            const deposits = [];
-            
-            depositItems.forEach(item => {
-                const month = parseInt(item.querySelector('.deposit-month').value) || 0;
-                const amount = parseFloat(item.querySelector('.deposit-amount').value) || 0;
-                
-                if (month > 0 && month <= months && amount > 0) {
-                    deposits.push({ month, amount });
-                }
-            });
-            
-            let balance = initialDeposit;
-            let totalProfit = 0;
-            let totalFees = 0;
-            let totalAdditional = 0;
-            let breakdownHTML = '';
-            
-            // Update initial values
-            document.getElementById('initialInvestment').textContent = formatCurrency(initialDeposit);
-            
-            for (let month = 1; month <= months; month++) {
-                const startingBalance = balance;
-                let additional = 0;
-                
-                // Check if there's a deposit this month
-                const monthDeposits = deposits.filter(d => d.month === month);
-                if (monthDeposits.length > 0) {
-                    additional = monthDeposits.reduce((sum, d) => sum + d.amount, 0);
-                    balance += additional;
-                    totalAdditional += additional;
-                }
-                
-                const investmentBalance = balance;
-                const monthlyProfit = investmentBalance * 0.25;
-                const performanceFee = monthlyProfit * 0.25;
-                const netProfit = monthlyProfit - performanceFee;
-                
-                balance += netProfit;
-                totalProfit += monthlyProfit;
-                totalFees += performanceFee;
-                
-                // Add to breakdown table
-                breakdownHTML += `
-                    <tr>
-                        <td>${month}</td>
-                        <td>${formatCurrency(startingBalance)}</td>
-                        <td>${formatCurrency(additional)}</td>
-                        <td>${formatCurrency(investmentBalance)}</td>
-                        <td>${formatCurrency(monthlyProfit)}</td>
-                        <td>${formatCurrency(performanceFee)}</td>
-                        <td>${formatCurrency(netProfit)}</td>
-                        <td>${formatCurrency(balance)}</td>
-                    </tr>
+            if (service) {
+                modalContent.innerHTML = `
+                    <h3><i class="${service.icon}"></i> ${service.title}</h3>
+                    <p>${service.description}</p>
+                    <div class="service-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            ${service.features.map(feature => `<li><i class="fas fa-check"></i> ${feature}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <a href="#contact" class="cta-btn cta-primary" style="margin-top: 1.5rem; display: inline-block;">Get Quote for This Service</a>
                 `;
+                serviceModal.classList.add('active');
             }
+        });
+    });
+
+    closeModal.addEventListener('click', () => {
+        serviceModal.classList.remove('active');
+    });
+
+    serviceModal.addEventListener('click', (e) => {
+        if (e.target === serviceModal) {
+            serviceModal.classList.remove('active');
+        }
+    });
+
+    // Multi-step Form
+    document.addEventListener('DOMContentLoaded', function() {
+        const formSteps = document.querySelectorAll('.form-step');
+        const progressSteps = document.querySelectorAll('.progress-step');
+        const nextButtons = document.querySelectorAll('.next-step');
+        const prevButtons = document.querySelectorAll('.prev-step');
+        const multiStepForm = document.getElementById('multi-step-form');
+        
+        let currentStep = 0;
+        
+        function showStep(stepIndex) {
+            formSteps.forEach((step, index) => {
+                step.classList.toggle('active', index === stepIndex);
+            });
             
-            // Update results
-            document.getElementById('totalAdditional').textContent = formatCurrency(totalAdditional);
-            document.getElementById('totalProfits').textContent = formatCurrency(totalProfit);
-            document.getElementById('performanceFees').textContent = formatCurrency(totalFees);
-            document.getElementById('netProfits').textContent = formatCurrency(totalProfit - totalFees);
-            document.getElementById('finalBalance').textContent = formatCurrency(balance);
+            progressSteps.forEach((step, index) => {
+                if (index < stepIndex) {
+                    step.classList.add('completed');
+                    step.classList.remove('active');
+                } else if (index === stepIndex) {
+                    step.classList.add('active');
+                    step.classList.remove('completed');
+                } else {
+                    step.classList.remove('active', 'completed');
+                }
+            });
             
-            // Update breakdown table
-            document.getElementById('breakdownBody').innerHTML = breakdownHTML;
+            currentStep = stepIndex;
         }
         
-        function formatCurrency(amount) {
-            return '$' + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+        nextButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Basic validation
+                const currentFormStep = formSteps[currentStep];
+                const inputs = currentFormStep.querySelectorAll('input[required], select[required], textarea[required]');
+                let isValid = true;
+                
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        isValid = false;
+                        input.style.borderColor = 'red';
+                    } else {
+                        input.style.borderColor = '#ddd';
+                    }
+                });
+                
+                if (isValid && currentStep < formSteps.length - 1) {
+                    showStep(currentStep + 1);
+                } else if (!isValid) {
+                    alert('Please fill in all required fields before proceeding.');
+                }
+            });
+        });
+        
+        prevButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                if (currentStep > 0) {
+                    showStep(currentStep - 1);
+                }
+            });
+        });
+        
+        // Form validation
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
         }
-    </script>
+        
+        function validatePhone(phone) {
+            const re = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+            return re.test(phone);
+        }
+        
+        multiStepForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            if (phone && !validatePhone(phone)) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+            
+            // Form submission successful
+            alert('Thank you for your inquiry! We will contact you within 24 hours.');
+            this.reset();
+            showStep(0);
+        });
+    });
+
+    // Film Reel Interaction
+    document.addEventListener('DOMContentLoaded', function() {
+        const filmReelTrack = document.querySelector('.film-reel-track');
+        
+        filmReelTrack.addEventListener('mouseenter', function() {
+            this.style.animationPlayState = 'paused';
+        });
+        
+        filmReelTrack.addEventListener('mouseleave', function() {
+            this.style.animationPlayState = 'running';
+        });
+
+        // Add click event to show project details
+        document.querySelectorAll('.film-reel-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const title = this.querySelector('.project-title').textContent;
+                alert(`Viewing details for: ${title}\n\nThis project has been successfully completed and delivered to our client's satisfaction.`);
+            });
+        });
+    });
+</script>
 </body>
 </html>
